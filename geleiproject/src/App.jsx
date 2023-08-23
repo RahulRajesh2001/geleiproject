@@ -20,12 +20,12 @@ function App() {
     <PageFour/>
     <PageFive/>
     <PageSix/>
-    <PageSeven/>
-    <PageEight/>
+   <PageSeven/>
+    {/* <PageEight/>
     <PageNine/>
     <PageTen/>
-    <PageEleven/>
-    <PageTwelve/>
+    <PageEleven/> */}
+    {/* <PageTwelve/> */}
     </>
   )
 }

@@ -353,11 +353,11 @@ const PageEleven = () => {
         </div>
 
         {/* headging */}
-         <div className='absolute z-10 flex justify-center items-center  lg:w-[900px] lg:h-[250px]'>
+         {/* <div className='absolute z-10 flex justify-center items-center  lg:w-[900px] lg:h-[250px]'>
           <div className='font-normal text-[170px] tracking-[70px] font-link'>
             Fashion
           </div>
-        </div> 
+        </div>  */}
 
         <div className=' flex justify-center items-center absolute z-20 lg:top-[450px] lg:right-[320px]  lg:w-[300px] lg:h-[70px]'>
           <div className=''>
