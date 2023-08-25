@@ -25,7 +25,7 @@ function App() {
      <PageNine/>
     <PageTen/>
     <PageEleven/> 
-    {/* <PageTwelve/> */}
+    <PageTwelve/>
     </>
   )
 }
