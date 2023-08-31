@@ -18,8 +18,8 @@ const HomePage = () => {
         className='flex justify-between  lg:w-[100%] lg:h-[100px] lg:mt-0
                                           md:w-[100%] md:h-[90px] md:mt-0
                                           sm:w-[100%] sm:h-[80px] sm:mt-0
-                                          vsm:w-[100%] vsm:h-[50px] vsm:mt-[50px]
-                                          vvsm:w-[100%] vvsm:h-[50px] vvsm:mt-[50px]
+                                          vsm:w-[100%] vsm:h-[80px]
+                                          vvsm:w-[100%] vvsm:h-[80px] 
 
                             '
       >
@@ -28,8 +28,8 @@ const HomePage = () => {
           className='flex justify-center items-center  lg:w-[200px] lg:h-[100px]
                                                       md:w-[180px] md:h-[90px]
                                                       sm:w-[120px] sm:h-[80px]
-                                                      vsm:w-[120px] vsm:h-[50px] 
-                                                      vvsm:w-[100px] vvsm:h-[40px]                                                    '
+                                                      vsm:w-[120px] vsm:h-[80px] 
+                                                      vvsm:w-[100px] vvsm:h-[80px]                                       '
         >
           <img
             src={logo}
@@ -37,8 +37,8 @@ const HomePage = () => {
             className='lg:w-[150px] lg:h-[80px]
                           md:w-[140px] md:h-[70px]
                           sm:w-[100px] sm:h-[60px]
-                          vsm:w-[70px] vsm:h-[40px]
-                          vvsm:w-[60px] vvsm:h-[30px]
+                          vsm:w-[80px] vsm:h-[60px]
+                          vvsm:w-[80px] vvsm:h-[60px]
                           '
           />
         </div>
