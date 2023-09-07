@@ -1,113 +1,70 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import homepageimg from '../assets/homepageimg.png'
-import logo from '../assets/Logo.png'
+
 import button from '../assets/explorenowbutton.png'
+import NavBar from './NavBar'
 
 const HomePage = () => {
+
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [opacity, setOpacity] = useState(0);
+  const [isFocused, setIsFocused] = useState(false);
+
+  const divRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    if (!divRef.current || isFocused) return;
+
+    const div = divRef.current;
+    const rect = div.getBoundingClientRect();
+
+    setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  };
+
+
+  const handleFocus = () => {
+    setIsFocused(true);
+    setOpacity(1);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
+    setOpacity(0);
+  };
+
+  const handleMouseEnter = () => {
+    setOpacity(1);
+  };
+
+  const handleMouseLeave = () => {
+    setOpacity(0);
+    setTimeout(() => {
+        setPosition({ x: 0, y: 0 });
+      }, 200);
+  };
+
+  const inactiveStyle = {
+        
+  };
+
+  const activeStyle = {
+    background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(0, 0, 0, 0.1), transparent 30%)`,
+  };
+
+
   return (
     <div
-      className='bg-[#FFFFFF] lg:w-[100%] lg:h-[750px]
+      
+      className=' lg:w-[100%] lg:h-[750px] 
                                        md:w-[100%] md:h-[750px]
                                        sm:w-[100%] sm:h-[750px]
                                        vsm:w-[100%] vsm:h-[700px]
                                        vvsm:w-[100%] vvsm:h-[700px]
                                       '
+
+                                    
     >
-      {/*NavBar */}
-      <div
-        className='flex justify-between  lg:w-[100%] lg:h-[100px] lg:mt-0
-                                          md:w-[100%] md:h-[90px] md:mt-0
-                                          sm:w-[100%] sm:h-[80px] sm:mt-0
-                                          vsm:w-[100%] vsm:h-[80px]
-                                          vvsm:w-[100%] vvsm:h-[80px] 
-
-                            '
-      >
-        {/* leftside */}
-        <div
-          className='flex justify-center items-center  lg:w-[200px] lg:h-[100px]
-                                                      md:w-[180px] md:h-[90px]
-                                                      sm:w-[120px] sm:h-[80px]
-                                                      vsm:w-[120px] vsm:h-[80px] 
-                                                      vvsm:w-[100px] vvsm:h-[80px]                                       '
-        >
-          <img
-            src={logo}
-            alt=''
-            className='lg:w-[150px] lg:h-[80px]
-                          md:w-[140px] md:h-[70px]
-                          sm:w-[100px] sm:h-[60px]
-                          vsm:w-[80px] vsm:h-[60px]
-                          vvsm:w-[80px] vvsm:h-[60px]
-                          '
-          />
-        </div>
-        {/* right part */}
-        <div
-          className='flex justify-center items-center  lg:w-[600px] lg:h-[100px]
-                                                       md:w-[60%] md:h-[90px]  
-                                                        sm:w-[60%] sm:h-[80px] 
-                                                        vsm:w-[60%] vsm:h-[50px] sm:block
-                                                        vsm:hidden vvsm:hidden
-
-                                                        '
-        >
-          <div
-            className='flex justify-between items-center   lg:w-[500px] lg:h-[20px]
-                                                                  md:w-[450px] md:h-[20px] 
-                                                                  sm:w-[350px] sm:h-[20px]  mt-[40px]
-                                                                   '
-          >
-            <div
-              className=' font-Poppins text-[#2D2D2D]  lg:text-[13px] lg:w-[60px] lg:h-[20px]
-                                                              md:text-[13px] md:w-[70px] md:h-[20px]
-                                                              sm:text-[12px] sm:w-[40px] sm:h-[20px] 
-                                                            
-                                                            '
-            >
-              Home
-            </div>
-            <div
-              className=' font-Poppins text-[#2D2D2D] lg:text-[13px] lg:w-[60px] lg:h-[20px]
-                                                              md:text-[13px] md:w-[70px] md:h-[20px]
-                                                              sm:text-[12px] sm:w-[40px] sm:h-[20px] 
-                                                            
-                                                              '
-            >
-              Services
-            </div>
-            <div
-              className=' font-Poppins text-[#2D2D2D] lg:text-[13px] lg:w-[60px] lg:h-[20px]
-                                                              md:text-[13px] md:w-[70px] md:h-[20px]
-                                                              sm:text-[12px] sm:w-[50px] sm:h-[20px]
-                                                            
-                                                              '
-            >
-              About Us
-            </div>
-            <div
-              className=' font-Poppins text-[#2D2D2D] lg:text-[13px] lg:w-[60px] lg:h-[20px]
-                                                              md:text-[13px] md:w-[70px] md:h-[20px]
-                                                              sm:text-[12px] sm:w-[40px] sm:h-[20px]
-                                                            
-                                                            '
-            >
-              Projects
-            </div>
-            <div
-              className=' font-Poppins text-[#2D2D2D] lg:text-[13px] lg:w-[60px] lg:h-[20px]
-                                                              md:text-[13px] md:w-[70px] md:h-[20px]
-                                                              sm:text-[12px] sm:w-[60px] sm:h-[20px]
-                                                            
-                                                             '
-            >
-              Contact
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* body part */}
+  
 
       <div
         className='relative flex justify-center items-center lg:w-[100%] lg:h-[600px]  
@@ -116,6 +73,14 @@ const HomePage = () => {
                                                               vsm:w-[100%] vsm:h-[600px]
                                                               vvsm:w-[100%] vvsm:h-[600px]
                                                               '
+
+                                                              ref={divRef}                                       
+        onMouseMove={handleMouseMove}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={opacity ? activeStyle : inactiveStyle}
       >
         {/*TextPart */}
         <div

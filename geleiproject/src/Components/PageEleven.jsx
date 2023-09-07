@@ -17,7 +17,7 @@ import groupdots from '../assets/groupdots.png'
 
 const PageEleven = () => {
   return (
-   <div >
+   <div  className='snap-start'>
      <div
       className='flex relative bg-cover bg-center lg:w-[100%] lg:h-[750px]
                                                   md:w-[100%] md:h-[750px]
@@ -51,12 +51,12 @@ const PageEleven = () => {
           <img
             src={pageelevenlogoround}
             alt=''
-            className='lg:w-[130px] lg:h-[130px]
+            className='animate-spin-slow lg:w-[130px] lg:h-[130px]
                        md:w-[130px] md:h-[130px]
                        sm:w-[100px] sm:h-[100px]'
           />
           <div
-            className='flex justify-center items-center  absolute z-20 lg:w-[70px] lg:h-[70px]
+            className=' flex justify-center items-center  absolute z-20 lg:w-[70px] lg:h-[70px]
                                                                         md:w-[70px] md:h-[70px]
                                                                         sm:w-[60px] sm:h-[60px]'
           >

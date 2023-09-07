@@ -62,7 +62,6 @@ const PageTwo = () => {
               className=' lg:w-[500px] lg:h-[500px] lg:mr-[50px] lg:mt-0
                               md:w-[500px] md:h-[500px] md:mr-[5px] md:mt-[80px] 
                               sm:w-[500px] sm:h-[500px]  sm:mr-[5px] sm:mt-[100px]
-                              vsm:w-[250px] vsm:h-[200px]   
                               vvsm:w-[210px] vvsm:h-[200px]'
             >
               <img

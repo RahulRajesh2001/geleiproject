@@ -13,7 +13,7 @@ import arrowgroup from '../assets/arrowgroup.png'
 const PageTwelve = () => {
   return (
     <div
-      className='relative  lg:w-[100%] lg:h-[700px]
+      className='snap-start relative  lg:w-[100%] lg:h-[700px]
                               md:w-[100%] md:h-[700px]
                               sm:w-[100%] sm:h-[700px] 
                               vsm:w-[100%] vsm:h-[1200px]'

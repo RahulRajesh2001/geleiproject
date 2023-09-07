@@ -19,6 +19,9 @@ export default {
         lg:"1024px",
         xl:"1280px"
       },
+      animation: {
+        "spin-slow": 'spin 20s linear infinite', // Adjust the duration (4s) as needed for a slower rotation
+      },
     },
   },
   plugins: [],

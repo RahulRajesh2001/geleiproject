@@ -1,4 +1,5 @@
 import HomePage from "./Components/HomePage"
+import NavBar from "./Components/NavBar"
 import PageEight from "./Components/PageEight"
 import PageEleven from "./Components/PageEleven"
 import PageFive from "./Components/PageFive"
@@ -14,6 +15,7 @@ import PageTwo from "./Components/PageTwo"
 function App() {
   return (
     <>
+     <NavBar />
     <HomePage/>
     <PageTwo/>
     <PageThree/>
@@ -24,8 +26,10 @@ function App() {
    <PageEight/>
      <PageNine/>
     <PageTen/>
-    <PageEleven/> 
+    <div className="snap-y snap-mandatory overflow-scroll h-[100vh] no-scrollbar">
+    <PageEleven /> 
     <PageTwelve/>
+    </div>
     </>
   )
 }
