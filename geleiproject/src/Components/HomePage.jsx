@@ -1,80 +1,59 @@
 import React, { useRef, useState } from 'react'
 import homepageimg from '../assets/homepageimg.png'
-
 import button from '../assets/explorenowbutton.png'
-import NavBar from './NavBar'
 
 const HomePage = () => {
+// for spot light animation
 
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [opacity, setOpacity] = useState(0);
-  const [isFocused, setIsFocused] = useState(false);
+  const [position, setPosition] = useState({ x: 0, y: 0 })
+  const [opacity, setOpacity] = useState(0)
+  const [isFocused, setIsFocused] = useState(false)
 
-  const divRef = useRef(null);
+  const divRef = useRef(null)
 
   const handleMouseMove = (e) => {
-    if (!divRef.current || isFocused) return;
+    if (!divRef.current || isFocused) return
 
-    const div = divRef.current;
-    const rect = div.getBoundingClientRect();
+    const div = divRef.current
+    const rect = div.getBoundingClientRect()
 
-    setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-  };
-
+    setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top })
+  }
 
   const handleFocus = () => {
-    setIsFocused(true);
-    setOpacity(1);
-  };
+    setIsFocused(true)
+    setOpacity(1)
+  }
 
   const handleBlur = () => {
-    setIsFocused(false);
-    setOpacity(0);
-  };
+    setIsFocused(false)
+    setOpacity(0)
+  }
 
   const handleMouseEnter = () => {
-    setOpacity(1);
-  };
+    setOpacity(1)
+  }
 
   const handleMouseLeave = () => {
-    setOpacity(0);
+    setOpacity(0)
     setTimeout(() => {
-        setPosition({ x: 0, y: 0 });
-      }, 200);
-  };
-
-  const inactiveStyle = {
-        
-  };
+      setPosition({ x: 0, y: 0 })
+    }, 200)
+  }
+  const inactiveStyle = {}
 
   const activeStyle = {
     background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(0, 0, 0, 0.1), transparent 30%)`,
-  };
-
+  }
 
   return (
     <div
-      
-      className=' lg:w-[100%] lg:h-[750px] 
-                                       md:w-[100%] md:h-[750px]
-                                       sm:w-[100%] sm:h-[750px]
-                                       vsm:w-[100%] vsm:h-[700px]
-                                       vvsm:w-[100%] vvsm:h-[700px]
+      className='bg-red-100  w-[100%] h-screen
                                       '
-
-                                    
     >
-  
-
-      <div
-        className='relative flex justify-center items-center lg:w-[100%] lg:h-[600px]  
-                                                              md:w-[100%] md:h-[600px]
-                                                              sm:w-[100%] sm:h-[600px]
-                                                              vsm:w-[100%] vsm:h-[600px]
-                                                              vvsm:w-[100%] vvsm:h-[600px]
-                                                              '
-
-                                                              ref={divRef}                                       
+      <div  className='  relative flex justify-center items-center  w-[100%] h-[600px] '
+        // spot light animation
+        ref={divRef}
         onMouseMove={handleMouseMove}
         onFocus={handleFocus}
         onBlur={handleBlur}
@@ -84,6 +63,7 @@ const HomePage = () => {
       >
         {/*TextPart */}
         <div
+        
           className='absolute z-20 flex flex-col justify-center items-center lg:w-[700px] lg:h-[550px] lg:mb-0
                                                                                 md:w-[500px] md:h-[400px] md:mb-0
                                                                                 sm:w-[500px] sm:h-[500px] sm:mb-0
@@ -164,6 +144,8 @@ const HomePage = () => {
                                                                        '
         >
           <div
+          
+         
             className=' lg:w-[600px] lg:h-[550px]
                         md:w-[500px] md:h-[480px]
                         sm:w-[480px]  sm:h-[480px] 
