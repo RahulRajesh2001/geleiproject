@@ -48,7 +48,7 @@ const HomePage = () => {
 
   return (
     <div
-      className='bg-red-100  w-[100%] h-screen
+      className=' w-[100%] h-screen
                                       '
     >
       <div  className='  relative flex justify-center items-center  w-[100%] h-[600px] '
